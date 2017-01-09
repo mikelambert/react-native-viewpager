@@ -78,9 +78,9 @@ var ViewPager = React.createClass({
           vx = gestureState.vx;
 
       var step = 0;
-      if (relativeGestureDistance < -0.5 || (relativeGestureDistance < 0 && vx <= -1e-6)) {
+      if (relativeGestureDistance < -0.5 || (relativeGestureDistance < -0.2 && vx <= -1e-6)) {
         step = 1;
-      } else if (relativeGestureDistance > 0.5 || (relativeGestureDistance > 0 && vx >= 1e-6)) {
+      } else if (relativeGestureDistance > 0.5 || (relativeGestureDistance > 0.2 && vx >= 1e-6)) {
         step = -1;
       }
 
